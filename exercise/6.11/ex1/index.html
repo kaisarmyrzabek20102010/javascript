@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+
+var order="";
+var isCar = prompt('Тапсырыз берініз' + '\n' + 'A)Mers' +'\n' + 'B)Bmw' + '\n' + 'C)Nissan');
+
+
+if(isCar == 'A' || isCar == 'А' ||  isCar == 'А'){
+    order +=  " Mers";
+ 
+    var color = prompt('қандай түс тапсырыс бересіз?' + '\n' + 'A)қара'+ '\n' + 'B)ақ'+ '\n' + ' C)көк');
+
+
+    if(color == 'А' || color == 'A' ||  color == 'А'){
+
+    order +=  " Қара";
+
+    var year = prompt('Машинанын жылы' + '\n' + 'A)2022' +'\n'+ 'B)2024' +'\n'+  'C)2021');
+
+
+ if(year == 'A' || year == 'А' ||  year == 'А'){
+
+    order += "2022";
+
+
+ }
+    }
+}
+ if (isCar == 'B' || isCar == 'В' ||  isCar == 'В'){
+    order +=  " Bmw";
+
+    var color = prompt('қандай түс тапсырыс бересіз?' + '\n' + 'A)қара'+ '\n' + 'B)ақ'+ '\n' + ' C)көк');
+
+    if(color == 'B' || color == 'С' ||  color == 'С'){
+        order +=  " ақ";
+        
+    var year = prompt('Машинанын жылы' + '\n' + 'A)2022' +'\n'+ 'B)2024' +'\n'+  'C)2021');
+
+    if(year == 'В' || year == 'В' ||  year == 'B'){
+        order +=  " 2024";
+    }
+
+    }
+}
+ if (isCar == 'C' || isCar == 'С' ||  isCar == 'С'){
+
+    order += " Nissan";
+  
+    var color = prompt('қандай түс тапсырыс бересіз?' + '\n' + 'A)қара'+ '\n' + 'B)ақ'+ '\n' + ' C)көк');
+
+    if (color == 'C' || color == 'С' ||  color == 'С'){
+        order += " көк";
+
+        var year = prompt('Машинанын жылы' + '\n' + 'A)2022' +'\n'+ 'B)2024' +'\n'+  'C)2021');
+
+    if(year == 'С' || year == 'С' ||  year == 'C'){
+        order += " 2021";
+
+
+    }
+
+    }
+}
+alert (order)
+
+    </script>
+</body>
+</html>
