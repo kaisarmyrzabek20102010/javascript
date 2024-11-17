@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //   console.log('byl jyp sandar qosyndysy $(num2)');
+     //   console.log('byl jyp sandar qosyndysy $(num3)');
+
+
+     var start = Number(prompt('san jaz'));
+     var end = Number(prompt('san jaz'));
+     let num  = 0;
+     var num2 = 0;
+     let max;
+     let min;
+
+
+     if(start > end) {
+        max=start;
+        min=end
+     }else{
+        max=end;
+        min=start;
+     }
+        
+     
+     for (let i = min; i <= max; i++ ){
+            if(i%2==0){
+                num2+=i
+                continue;
+            }else{
+                num+=i
+                continue;
+            }
+        }
+            console.log(num);
+            console.log(num2);
+    </script>
+</body>
+</html>

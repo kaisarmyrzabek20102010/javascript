@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  var result = 0;
+      //  var pro = Number(prompt("student sany"));
+
+      //   for (let i = 1; i <= pro; i++) {
+      //     if (pro<100 && pro>0) {
+      //         var baga = Number(prompt("oqushi bagasi#"+i));
+      //         result += baga/pro;
+      //     }else{
+      //         alert('100 ben 0 arasyn jaz')
+      //     }
+      //   }
+
+      //   while (pro < 100 && pro > 0) {
+      //     alert('100 ben 0 arasyn jaz')
+      //   }
+
+      var result = 0;
+      var pro = Number(prompt("student sany"));
+
+      for (let i = 1; i <= pro; i++) {
+        var baga = Number(prompt("oqushi bagasi#" + i));
+
+        while (baga < 0 || baga > 100) {
+          continue
+        }
+
+        result += baga / pro;
+
+        var nam1;
+        var san = 5;
+      }
+
+      console.log(result);
+    </script>
+  </body>
+</html>
