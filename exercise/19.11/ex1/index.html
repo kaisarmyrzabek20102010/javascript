@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = +prompt("san jaz");
+      let num2 = +prompt("san jaz");
+      let tanba = prompt("tanba jaz");
+      let result = 0;
+
+      const cal = (a, b, c) => {
+        switch (tanba) {
+          case "+":
+           result+= num1 + num2;
+            break;
+
+
+          case "*":
+           result+= num1  * num2 ;
+            break;
+
+            
+          case "/":
+          result+= num1 / num2 ;
+            break;
+
+
+          case "-":
+          result+= num1 - num2 ;
+            break;
+
+
+          default:
+            alert('tanba jaz')
+            break;
+        }
+        return result
+      };
+      console.log(cal(num1,num2,tanba));
+      
+    </script>
+  </body>
+</html>

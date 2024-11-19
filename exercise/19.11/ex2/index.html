@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var money = +prompt("san jaz");
+      var valyta = prompt("valuta jaz");
+
+      const moneyconvert = (money) => {
+        var result = 0;
+        if (valyta == "tenge") {
+          result = money / 500;
+        } else if (valyta == "dollar") {
+          result = money * 500;
+        }
+        return result;
+      };
+      console.log(moneyconvert(money));
+    </script>
+  </body>
+</html>
