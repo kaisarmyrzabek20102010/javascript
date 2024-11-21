@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    //   const kaspi = (a, b) => {
+    //     for (let index = 1; index <= Infinity; index++) {
+    //       var sany = +prompt("aqsha sany");
+    //       var valutasy = prompt("valutsy qandai?");
+    //       var aqsha = 0;
+
+    //       if (valutasy == "dollar") {
+    //         aqsha += sany * 0.95;
+    //         continue;
+    //       } else if (valutasy == "euro") {
+    //         aqsha += sany * 1;
+    //         continue;
+    //       } else if (valutasy == "tenge") {
+    //         aqsha += sany * 0.002;
+
+    //       } else if (sany==0) {
+    //         console.log(aqsha);
+    //         break;
+    //       } else {
+    //         console.log("qate");
+    //       }
+    //     }
+    //     return aqsha
+    //     console.log(aqsha);
+        
+    //   };
+    //   kaspi()
+
+
+
+    const kaspi = () => {
+    let aqsha = 0;
+
+    for (let index = 1; index <= Infinity; index++) {
+        let sany = +prompt("sany");
+        let valutasy = prompt("valutasy")
+
+        if (sany == 0) {
+            console.log(aqsha);
+            break;
+        }
+
+        switch (valutasy) {
+            case "dollar":
+                aqsha += sany * 0.95;
+                break;
+            case "euro":
+                aqsha += sany * 1;
+                break;
+            case "tenge":
+                aqsha += sany * 0.002;
+                break;
+            default:
+                console.log('qate');
+                break;
+        }
+    }
+
+    return aqsha;
+};
+
+alert(kaspi());
+
+    </script>
+  </body>
+</html>
