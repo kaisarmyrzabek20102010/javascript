@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function baga(a) {
+        var a = prompt("okyshu aty");
+        var b = +prompt("okyshu bagasy");
+
+        if        (a >= 0 && a < 60) {
+          console.log("bagasy f");
+        } else if (a >= 59 && a < 70) {
+          console.log("bagasy d");
+        } else if (a >= 69 && a < 80) {
+          console.log("bagasy c");
+        } else if (a >= 79 && a < 90) {
+          console.log("bagasy b");
+        } else if (a >= 89 && a < 100) {
+          console.log("bagasy a");
+        }
+        return a, b;
+      }
+
+      alert(baga());
+    </script>
+  </body>
+</html>
