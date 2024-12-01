@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,16 +29,29 @@
       // console.console.log(element)
       // }
 
-      let array = [3.78, 5.786, 9.17];
+      //   let array = [3.78, 5.786, 9.17];
+      //
+      //   let doubled = array.map((num) => num * 2);
+      //   let squarred = array.map((num) => num * num);
+      //   let rounded = array.map((num) => Math.round(num));
+      //
+      //   console.log("jai", array);
+      //   console.log("eki eselengen", doubled);
+      //   console.log("kvadrat", squarred);
+      //   console.log("round", rounded);
 
-      let doubled = array.map((num) => num * 2);
-      let squarred = array.map((num) => num * num);
-      let rounded = array.map((num) => Math.round(num));
+      const fillarray = (arr) => {
+        return arr;
+      };
+      let array = fillarray([]);
 
-      console.log("jai", array);
-      console.log("eki eselengen", doubled);
-      console.log("kvadrat", squarred);
-      console.log("round", rounded);
+      let num = +prompt("bagasy");
+
+      function price(array, price) {
+        return array.filter((tauar) => tauar <= price);
+      }
+      console.log(price(array,num));
+      console.log(price(array, num).lenght);
     </script>
   </body>
 </html>
