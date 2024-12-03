@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const users = [
+        { name: "alya", age: 28 },
+        { name: "asdfghj", age: 29 },
+        { name: "qwerty", age: 30.5 },
+        { name: "alzxcvbn", age: 35 },
+        { name: "denjj", age: 332432 },
+      ];
+      function hallo() {
+        return users.filter((user) => user.age >= 30);
+      }
+      function sort() {
+        return users.sort((a,b)=>a.age - b.age)
+      }
+      console.log(hallo());
+      
+      
+    </script>
+  </body>
+</html>

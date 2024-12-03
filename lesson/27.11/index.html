@@ -9,14 +9,20 @@
       let cities = ["astana", "almaty", "aqtay", "aqtobe", "new york"];
       let san = [2, 3, 6, 4, 8, 9, 6, 1, 3, 4, 5];
       cities[3] = "semey";
+
       cities.push("aqtay", "Boston");
+
       cities.unshift("stambyl", "anqara", "Berlin");
+
       console.log(cities);
       cities.pop(); //songysy    alyp     tastaidy    shift  aldynan
+
       cities.splice(2, 3, "oskemmen"); //2den    bastap    3 zat    alyp    tastaidy    olardyn     ornyna      +OSKEMMEN
       console.log(cities);
+
       cities.reverse(); //ornymen     ayistyryp     tastaidy
       san.sort((a, b) => b - a);
+      
       console.log(san);
       let copy = san.slice();
     </script>

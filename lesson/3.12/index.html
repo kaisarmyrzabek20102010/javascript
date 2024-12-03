@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>doc</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        names: "alya",
+        age: 28,
+        hobbies: [
+          { name: "qitap oqy ", start: 2010 },
+          { name: "velleyball ", start: 2013 },
+          { name: "chess ", start: 2012 },
+          { name: "japanday ", start: 2015 },
+          { name: "oiundar ", start: 2016 },
+        ],
+        addhobie: function () {
+          let newhobby = prompt("qandai hobbiun bar");
+          let newHobbyYear = prompt("qaz qai year?");
+
+          this.hobbies.push({ name: newHobby, year: newHobbyYear });
+        },
+        year: function () {
+          return this.hobbies.filter((hobby) => hobby.start >= 2013);
+        },
+      };
+      console.log(user.year());
+    </script>
+  </body>
+</html>

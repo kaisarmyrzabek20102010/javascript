@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const team = {
+            name:'coders',
+            members:[
+                {name:'damir',skill:['oris tily','english']},
+                {name:'daulet',skill:['html','qazaq']},
+                {name:'mansyr',skill:['Go','css']},
+                {name:'ramazan',skill:['java','c++']},
+                {name:'aslan',skill:['python','html css']},
+            ]
+        }
+        function joinallskils() {
+            return team.members.flatMap((member)=>member.skill)
+        }
+        console.log(joinallskils());
+        
+    </script>
+</body>
+</html>
