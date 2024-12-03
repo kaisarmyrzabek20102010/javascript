@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const students = [
+        { name: "begarys", age: 15, subject: ["matem", "english"] },
+        { name: "Islam", age: 13, subject: ["pe", "physic"] },
+        { name: "asylbek", age: 15, subject: ["informatika", "dsh"] },
+        { name: "Nurislam", age: 14, subject: ["dsh", "enbek"] },
+        { name: "uldana", age: 15, subject: ["informatika", "biology"] },
+        { name: "aia", age: 18, subject: ["chemia", "tarih"] },
+        { name: "ayganim", age: 15, subject: ["english", "dsh"] },
+        { name: "baqbergen", age: 13, subject: ["dsh", "informatica"] },
+        { name: "alihan", age: 15, subject: ["dsh", "informatica"] },
+        { name: "Muhamedali", age: 22, subject: ["dsh", "english"] },
+      ];
+      function subjes() {
+        return students.flatMap((student)=>student.subject)
+      }
+      function baldar() {
+        return students.filter((student)=>student.age>=13&&student.age<=16)
+      }
+      console.log(students);
+      console.log(subjes());
+
+      
+    </script>
+  </body>
+</html>
