@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ment</title>
+  </head>
+  <body>
+    <script>
+      const group = {
+        name: "",
+        students: [
+          { name: "people a ", age: 22, score: [100, 23, 67] },
+          { name: "people a ", age: 12, score: [100, 23, 67] },
+          { name: "people a ", age: 14, score: [100, 23, 67] },
+          { name: "people a ", age: 17, score: [100, 23, 67] },
+        ],
+      };
+      function ortasy() {
+        return (
+          group.students[3].score.reduce((sum, num) => sum + num, 0) / // qosyndy
+          group.students[3].score.length
+        );
+      }
+      console.log(ortasy());
+
+      function averageage() {
+        return (
+          group.students.reduce((sum, num) => sum + num.age, 0) /
+          group.students.length
+        );
+      }
+      console.log(averageage());
+    </script>
+  </body>
+</html>

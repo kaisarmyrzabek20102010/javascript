@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const library = {
+        name: "alatay hub",
+        books: [
+          { name: "book a", pages: 300 },
+          { name: "book b", pages: 10 },
+          { name: "book c", pages: 450 },
+          { name: "book d", pages: 230 },
+          { name: "book e", pages: 100 },
+        ],
+      };
+      function averagePage() {
+        return library.books.reduce((sum,num)=>sum+num.pages,0)
+      }
+    </script>
+  </body>
+</html>
