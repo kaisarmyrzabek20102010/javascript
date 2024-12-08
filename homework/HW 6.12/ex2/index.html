@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const books = [
+        { title: "kitap 1", author: "Автор 1", year: 2007 },
+        { title: "kitap 3", author: "Автор 2", year: 2010 },
+        { title: "kitap 2", author: "Автор 3", year: 2023 },
+      ];
+
+      function addbook() {
+        let aty = prompt("aty");
+        let bookFound = false;
+
+        for (let i = 0; i < books.length; i++) {
+          if (books[i].title == aty) {
+            let newYear = prompt("kitaptyn jana jyly");
+            books[i].year = newYear;
+            bookFound = true;
+            break;
+          }
+        }
+        if (!bookFound) {
+          alert("onday kitap joq");
+        }
+        let janakitap = "jana kitaptar\n";
+        for (let book of books) {
+          janakitap += `aty -${book.title} , jazyshi - ${book.author}, jazylgan jyly - ${book.year}\n`;
+        }
+        alert(janakitap);
+      }
+      addbook();
+    </script>
+  </body>
+</html>
