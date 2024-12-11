@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./sere.css" />
+  </head>
+  <body class="body">
+    <h1>interaktiv box  </h1>
+    <div class="box" id="box">hjg</div>
+    <button id="word">tus ozgerty</button>
+    <button id="qwer">qaitary</button>
+
+    <script>
+      const box = document.querySelector("#box");
+      const word = document.querySelector("#word");
+      const qwer = document.querySelector("#qwer");
+
+      word.addEventListener("click", () => {
+        box.style.backgroundColor = "blue";
+      });
+      qwer.addEventListener("click", () => {
+        box.style.backgroundColor = "green";
+      });
+
+      box.addEventListener('mouseenter',()=>{
+        box.style.backgroundColor = 'brown'
+      })
+      box.addEventListener('mouseleave',()=>{
+        box.style.backgroundColor = 'red'
+      })
+    </script>
+  </body>
+</html>
