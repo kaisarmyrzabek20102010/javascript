@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <form id="login">
-        <input type="text" placeholder="email" id="email">
-        <input type="password" placeholder="password" id="password">
-        <button type="submit">qiry</button>
-        <p id="errorMessage" style="color: red;"></p>
+  </head>
+  <body>
+    <form id="signUpForm">
+      <input type="text" placeholder="atyndy" id="name" />
+      <input type="email" placeholder="Email" id="email" />
+      <input type="password" placeholder="password" id="password" />
+      <input type="password" id="confirmPass" placeholder="qaitala" />
+
+      <button type="submit">register</button>
+      <p id="errorMessage" style="color: red"></p>
     </form>
+
     <script>
-        const login = document.getElementById('login')
-        const errorMessage = document.getElementById('errormessage')
+      document
+        .getElementById("signUpForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPass").value;
+          const errorMessage = document.getElementById("errorMessage");
+
+          if (!name || !email || !password || !confirmPassword) {
+            errorMessage.textContent = "bary tolturyly kerek";
+            return;
+          }
+
+          if (password < 6) {
+            errorMessage.textContent = "password dyrys emes";
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            errorMessage.textContent = "password birdei emes";
+            return;
+          }
+
+          errorMessage.textContent = "";
+          alert("yra!!!");
+        });
     </script>
-</body>
+  </body>
 </html>
