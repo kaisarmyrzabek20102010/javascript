@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="taskinput" placeholder="Add a task" />
+      <button id="addtask">+</button><br />
+      <input type="text" id="search" placeholder="Search tasks" />
+      <button id="buttonsearch">Search</button>
+    </form>
+    <ul id="tasklist"></ul>
+
+    <script>
+      const addtask = document.getElementById("addtask");
+      const tasklist = document.getElementById("tasklist");
+
+      addtask.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const taskinput = document.getElementById("taskinput");
+
+        if (taskinput.value.trim() !== "") {
+          const task = document.createElement("li");
+          const taskname = document.createElement("span");
+          const deletebutton = document.createElement("button");
+
+          task.classList.add("task");
+
+          taskname.textContent = taskinput.value;
+          deletebutton.textContent = "delete";
+
+          task.appendChild(taskname);
+          task.appendChild(deletebutton);
+          tasklist.appendChild(task);
+          taskinput.value = "";
+
+          task.addEventListener("dblclick", () => {
+            const changename = document.createElement("input");
+            changename.placeholder = 'ayustyr'
+            
+            task.replaceChild(changename,taskname)
+
+            changename.addEventListener('blur',()=>{
+
+                task.replaceChild(taskname,changename)
+            })
+          });
+        }
+      });
+
+      const searchbutton = document.getElementById("buttonsearch");
+
+      searchbutton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const search = document.getElementById("search").value.toLowerCase();
+        const tasks = document.querySelectorAll(".task");
+
+        tasks.forEach((task) => {
+          if (!task.textContent.toLowerCase().includes(search)) {
+            task.style.display = "none";
+          } else {
+            task.style.display = "flex";
+          }
+        });
+
+        document.getElementById("search").value = "";
+      });
+    </script>
+    <style>
+      form {
+        margin-bottom: 10px;
+      }
+      input {
+        margin: 5px;
+      }
+      button {
+        margin: 5px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+      }
+      .task {
+        background: #d6d6d6;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        align-items: center;
+      }
+    </style>
+  </body>
+</html>

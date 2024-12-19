@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h3>zhanzuak</h3>
+      <nav class="nav">
+        <a>about us</a>
+        <a>partner</a>
+        <a>down</a>
+      </nav>
+      <nav class="naver">
+        <a>sign in</a>
+        <a class="a">sign in</a>
+      </nav>
+    </header>
+
+    <h1 id="top"></h1>
+    <div class="container">
+      <div id="errorMessage">Қате</div>
+      <form id="request">
+        <h1>Заявка</h1>
+        <input type="text" id="name" placeholder="Атыңыз" />
+        <input type="text" id="phone" placeholder="Телефон номеріңіз" />
+
+        <select id="problem">
+          <option value="" disabled selected>---</option>
+          <option value="bailanis">Байланыс жок</option>
+          <option value="internet">Интернет баяу</option>
+          <option value="tv">Телевизор жасамайды</option>
+        </select>
+        <textarea id="comment"></textarea>
+
+        <button type="submit">Жіберу</button>
+      </form>
+    </div>
+
+    <a id="arrowUp" href="#top">UP</a>
+
+    <script>
+      const errorMessage = document.getElementById("errorMessage");
+      const requestForm = document.getElementById("request");
+
+      requestForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById("name");
+        const phone = document.getElementById("phone");
+        const problem = document.getElementById("problem");
+        const comment = document.getElementById("comment");
+
+        console.log({
+          name: name.value,
+          phone: phone.value,
+          problem: problem.value,
+          comment: comment.value,
+        });
+        if (
+          name.value === "" ||
+          phone.value === "" ||
+          problem.value === "" ||
+          comment.value === ""
+        ) {
+          errorMessage.style.transform = "translateY(-30vh)";
+          errorMessage.textContent = "Берілген жолдарды толтырырыңыз";
+        }
+      });
+
+      const arrowUp = document.getElementById("arrowUp");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY < 500) {
+          arrowUp.style.display = "none";
+        } else {
+          arrowUp.style.display = "block";
+        }
+      });
+
+      const header = document.querySelector(".header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          header.style.height = "20px";
+          header.style.background = "white";
+        } else {
+          header.style.height = "50px";
+          header.style.background = "rgb(195, 195, 195)";
+        }
+      });
+    </script>
+  </body>
+</html>
