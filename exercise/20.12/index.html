@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>blog jasbasy</h1>
+      <div class="input-group">
+        <label for="titleinput"></label>
+        <input type="text" id="titleinput" placeholder="taqyryp jaz" />
+      </div>
+      <div class="input-group">
+        <label for="contentinput">mazmyn</label>
+        <textarea
+          id="contentinput"
+          rows="4"
+          placeholder="mazmyndy jaz"
+        ></textarea>
+      </div>
+      <button id="addposbtn" class="button">jazba qosy</button>
+      <div id="blogposts" class="blog-posts"></div>
+    </div>
+
+    <script>
+      let posts = [];
+
+      function addPost() {
+        const titleInput = document.getElementById("titleInput");
+        const contentInput = document.getElementById("contentInput");
+
+        if (titleInput.value && contentInput.value) {
+          const post = {
+            id: Date.now(),
+            title: titleInput.value,
+            content: contentInput.value,
+            date: new Date().toLocaleDateString("kk-KZ"),
+          };
+
+          posts.push(post);
+
+          renderPosts();
+
+          titleInput.value = "";
+          contentInput.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
