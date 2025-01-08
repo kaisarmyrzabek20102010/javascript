@@ -1,0 +1,66 @@
+.all {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 300px;
+  gap: 7px;
+  height: 380px;
+  background: #363636;
+  margin-left: 600px;
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: x-large;
+  user-select: none;
+}
+
+.all button {
+  height: 60px;
+  width: 70px;
+  border: none;
+  user-select: none;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.bir button {
+  background: #a8a8a8;
+}
+
+.boly {
+  background: orange;
+}
+
+.san {
+  transition: 0.5s;
+  background: #585858;
+}
+
+.san:hover {
+  background: #767070;
+}
+
+.tanba {
+  background: #ffad20;
+  transition: 0.5s;
+}
+
+.tanba:hover {
+  background: #ffc560;
+}
+
+.equal {
+  background: #4fed1f;
+}
+
+.equal:hover {
+  background: #5bc446;
+}
+
+.ekran {
+  background: #1d1d1d;
+  border-radius: 10px;
+  height: 40px;
+  width: 290px;
+  color: #ffffff;
+  font-size: larger ;
+}
