@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(117, 117, 174);
+  position: relative;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+.wrapper {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: white;
+  border-radius: 10xp;
+}
+.cards,
+.card,
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card {  
+  list-style: none;
+  position: relative;
+  width: calc(100% / 4);
+  height: calc(100% / 4);
+}
+.view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  background-color: white;
+}
+
+.cards {
+  flex-wrap: wrap;
+  height: 800px;
+  width: 1000px;
+  justify-content: space-between;
+}
+.card img {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.front-view img,
+.back-view img {
+  width: 150px;
+}
+
+.back-view {
+  transform: rotateY(180deg);
+}
+
+.card .view {
+  backface-visibility: hidden;
+}
+
+.btns{
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  justify-content: space-between;
+
+}
+
+#start , #reset {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-style: 35px;
+  color:white;
+}
+
+#start{
+  background: green;
+}
+
+#reset{
+  background: orange;
+}
