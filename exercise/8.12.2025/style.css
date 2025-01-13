@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.cards .card {  
+.cards .card {
   list-style: none;
   position: relative;
   width: calc(100% / 4);
@@ -64,7 +64,7 @@ body {
   backface-visibility: hidden;
 }
 
-.btns{
+.btns {
   position: absolute;
   top: 200px;
   left: 40px;
@@ -72,22 +72,51 @@ body {
   flex-direction: column;
   height: 130px;
   justify-content: space-between;
-
 }
 
-#start , #reset {
+#start,
+#reset {
   width: 100px;
   height: 50px;
   border-radius: 10px;
   border: none;
   font-style: 35px;
-  color:white;
+  color: white;
 }
 
-#start{
+#start {
   background: green;
 }
 
-#reset{
+#reset {
   background: orange;
 }
+
+#timer {
+  position: absolute;
+  top: 10px;
+  left: 45%;
+  background-color: red;
+  width: 250px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  color: white;
+}
+
+#result {
+  position: absolute;
+  top: 43px;
+  left: 45%;
+  color: yellow;
+  font-size: 35px;
+}
+
+.card { 
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flipped{
+  transform: rotateY(-180deg);
+} 
