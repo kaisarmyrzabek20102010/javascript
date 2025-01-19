@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+  <script>
+    const apiUrl = "https://api.onlinedukan.com/products/123";
+
+    async function fetchProduct() {
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error("tauar tyraly malimet alynbady");
+        }
+        const data = await response.json();
+        const productTitle = data.name;
+        const productPrice = data.price;
+        const productDescription = data.Description;
+
+        document.body.innerHTML = `<h2>tauar aty ${productTitle}</h2>
+          <p>bagasy ${productPrice} $</p>
+          <p>sipatty ${productDescription}</p>`;
+      } catch (error) {
+        console.error('qate:', error);
+        document.body.innerHTML = '<p>tauar tyralymalimett jyktelinbeidy</p>';
+      }
+    }
+
+    fetchProduct();
+  </script>
+</body>
+</html>
