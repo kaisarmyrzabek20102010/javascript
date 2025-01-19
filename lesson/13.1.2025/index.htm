@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="jazy"></h1>
+
+    <script>
+      const text = "salem byl text birtindep sygady";
+      const jazy = document.getElementById("jazy");
+      let index = 0;
+
+      function typeText() {
+        if (index < text.length) {
+          jazy.textContent += text[index];
+          index++;
+          setTimeout(typeText, 50);
+        }
+      }
+
+      typeText();
+    </script>
+  </body>
+</html>

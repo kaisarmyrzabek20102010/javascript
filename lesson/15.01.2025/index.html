@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const apikey = "fb2cff02b71168e9f0c68fd3f83d168a";
+      const apiurl = "https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=kk;";
+
+      document.body.innerHTML = '<h1>qala aya raiun bily</h1><form><input type="Text" placeholder="mysaly Almaty"></input> <input type="submit"></input></form><h1>qala: </h1><h3>temperatyrasy: </h3>';
+
+      fetch(apiUrl)
+        .then((data) => {
+          const postTitle = data.title;
+          const postBody = data.body;
+        })
+        .catch((error) => {
+          console.error("Ошибка:", error);
+
+          document.body.innerHTML = "<p> He удалось загрузить пост.</p>";
+        });
+    </script>
+  </body>
+</html>
