@@ -1,0 +1,18 @@
+body {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.div {
+  background-color: #647def;
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  color: white;
+}
+
+.div button , input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}

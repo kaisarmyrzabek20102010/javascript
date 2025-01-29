@@ -1,12 +1,12 @@
 //malimet caqtay
-localStorage.setItem("name", "aijan");
+localStorage.setItem("names", "aijan");
 
 //malimetty oqy
-const name = localStorage.getItem("name");
-console.log(name); //aijan
+const names = localStorage.getItem("names");
+console.log(names); //aijan
 
 //malimetti joiy
-localStorage.removeItem("name"); 
+localStorage.removeItem("names"); 
 
 //malimetti tazalay
 localStorage.clear(); 

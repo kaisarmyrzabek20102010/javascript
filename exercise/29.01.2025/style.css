@@ -1,0 +1,25 @@
+.div{
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    border: none;
+    background: #e2e2e2;
+    border-radius: 14px;
+}
+
+.div input{
+    border: none;
+    margin: 10px;
+}
+
+.div button{
+    border: none;
+    background: #006eff;
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 5px;
+}
