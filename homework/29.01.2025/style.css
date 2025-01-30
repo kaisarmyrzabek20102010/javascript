@@ -11,7 +11,8 @@ body {
   color: white;
 }
 
-.div button , input {
+.div button,
+input {
   padding: 10px;
   border: none;
   border-radius: 10px;

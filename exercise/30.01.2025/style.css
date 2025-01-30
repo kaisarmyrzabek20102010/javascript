@@ -1,0 +1,36 @@
+.div {
+  padding: 10px;
+  margin: 300px 650px;
+  width: 200px;
+  height: 230px;
+  border: none;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 1px 1px 5px #696969;
+  font-size: large;
+  visibility: hidden;
+}
+
+body {
+  background: #f0efef;
+}
+
+.div input {
+  margin: 10px;
+}
+
+div button {
+  border: none;
+  background: #0091ff;
+  color: white;
+  width: 190px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+div button:hover {
+  background: #0026ff;
+  box-shadow: 1px 1px 5px #696969;
+}
