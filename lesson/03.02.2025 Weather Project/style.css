@@ -10,8 +10,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: #333;
-  color: white;
+  background-color: #616161;
+  color: #333;
+  background: #000;
 }
 
 header input {
@@ -40,27 +41,24 @@ header input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
 }
 
+
+
 .conteiner div {
-  background: #000000;
+  background: #bfbfbf;
+  padding: 10px;
   margin: 10px;
-  padding: 20px;
   border-radius: 10px;
-  color: white;
+  color: rgb(0, 0, 0);
   box-shadow: 1px 1px 5px #696969;
   width: 300px;
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s;
-}
-
-.conteiner div:hover {
-  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .searchDiv button {
@@ -78,10 +76,11 @@ header input {
 }
 
 footer {
-  background-color: #333;
+  background-color: #616161;
   color: white;
   text-align: center;
   padding: 20px 0;
+  margin-top: 100px;
 }
 
 .footer-content {
@@ -89,9 +88,6 @@ footer {
   margin: auto;
 }
 
-.footer-content p {
-  margin: 0;
-}
 
 .socials {
   list-style: none;
@@ -109,6 +105,7 @@ footer {
   color: white;
   text-decoration: none;
   font-size: 20px;
+  transition: 0.3s;
 }
 
 .socials a:hover {
@@ -119,4 +116,10 @@ footer img {
   width: 30px;
   height: 30px;
   mix-blend-mode: multiply;
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
