@@ -1,5 +1,4 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -9,7 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
   background-color: #616161;
   color: #333;
   background: #000;
@@ -39,16 +38,13 @@ header input {
 
 .conteiner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
-
-
 
 .conteiner div {
   background: #bfbfbf;
   padding: 10px;
-  margin: 10px;
+  margin-top: 100px;
   border-radius: 10px;
   color: rgb(0, 0, 0);
   box-shadow: 1px 1px 5px #696969;
@@ -78,19 +74,11 @@ header input {
 footer {
   background-color: #616161;
   color: white;
-  text-align: center;
   padding: 20px 0;
-  margin-top: 100px;
+  margin-top: 116px;
 }
-
-.footer-content {
-  max-width: 1200px;
-  margin: auto;
-}
-
 
 .socials {
-  list-style: none;
   padding: 0;
   margin: 10px 0 0;
   display: flex;
@@ -98,13 +86,15 @@ footer {
 }
 
 .socials li {
-  margin: 0 10px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .socials a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: large;
   transition: 0.3s;
 }
 
@@ -116,10 +106,4 @@ footer img {
   width: 30px;
   height: 30px;
   mix-blend-mode: multiply;
-}
-
-.weather {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 }

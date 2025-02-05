@@ -22,24 +22,23 @@ function displayWeather(data) {
   weather.innerHTML = `
   <div class="weather">
     <h2>аты: ${data.name}</h2><br>
-    <p>Температура: ${data.main.temp}°C</p>
-    <p>ауа райы: ${data.weather[0].description}</p>
-    <p>ыліалдылық: ${data.main.humidity}%</p>
-    <p>жел жылдамдығы: ${data.wind.speed} м/с</p>
-    </div>
+    <p>Температура: ${data.main.temp}°C</p><br>
+    <p>ауа райы: ${data.weather[0].description}</p><br>
+    <p>ылғалдылық: ${data.main.humidity}%</p><br>
+    <p>жел жылдамдығы: ${data.wind.speed} м/с</p><br>
+    </div>        
   `;
-
 }
-
 
 button.addEventListener("click", () => {
   const qala = input.value;
   fetchWeather(qala);
+  if (response.ok) {
+    localStorage.setItem("aya", qala);
+  } 
 });
 
-function localStorage() {
-    localStorage.setItem('qala', input.value);
-}
-localStorage();
-
-document.innerHTML = localStorage.getItem('qala');
+setTimeout(() => {
+  const aya = localStorage.getItem("aya");
+  alert(aya);
+}, 3000);
