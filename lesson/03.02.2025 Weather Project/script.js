@@ -23,7 +23,7 @@ function displayWeather(data) {
   <div class="weather">
     <h2>аты: ${data.name}</h2><br>
     <p>Температура: ${data.main.temp}°C</p><br>
-    <p>ауа райы: ${data.weather[0].description}</p><br>
+    <p>aya райы: ${data.weather[0].description}</p><br>
     <p>ылғалдылық: ${data.main.humidity}%</p><br>
     <p>жел жылдамдығы: ${data.wind.speed} м/с</p><br>
     </div>        
@@ -31,14 +31,30 @@ function displayWeather(data) {
 }
 
 button.addEventListener("click", () => {
+  const qorsety = document.getElementById("qorsety");
+
   const qala = input.value;
   fetchWeather(qala);
-  if (response.ok) {
-    localStorage.setItem("aya", qala);
-  } 
+  localStorage.setItem("aya", qala);
+
+
+  
+  asdfg();
 });
 
-setTimeout(() => {
+function asdfg() {
   const aya = localStorage.getItem("aya");
-  alert(aya);
-}, 3000);
+
+  qorsety.innerHTML = `<div class='qorset'>
+      <h1>${aya}</h1> 
+      <button id='del'>delete</button>
+    </div>`;
+
+  const del = document.getElementById("del");
+  const id = document.getElementById("id");
+
+  del.addEventListener("click", () => {
+    localStorage.removeItem("aya");
+    qorsety.innerHTML = "";
+  });
+}
