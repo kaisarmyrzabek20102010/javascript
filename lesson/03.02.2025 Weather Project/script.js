@@ -37,8 +37,6 @@ button.addEventListener("click", () => {
   fetchWeather(qala);
   localStorage.setItem("aya", qala);
 
-
-  
   asdfg();
 });
 

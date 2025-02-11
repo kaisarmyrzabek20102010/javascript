@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.search {
+  border: none;
+  border-radius: 10px;
+  background: #448cff;
+  transition: 0.3s;
+  width: 20px;
+  height: 10px;
+  background: none;
+}
+
+.logo img {
+  mix-blend-mode: multiply;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 50px 50px;
+}
+
+header {
+  background: #7adb69;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  justify-content: space-between;
+}
+
+header nav a {
+  margin: 10px;
+  text-decoration: none;
+  background: #448cff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.form input,
+button {
+  font-size: larger;
+}
+
+.form input {
+  padding: 5px;
+  border-radius: 35px;
+  transition: 0.3s;
+  height: 30px;
+  width: 200px;
+  padding: 5px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 500px;
+  margin-top: 50px;
+}
+
+.form button {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.form button:hover {
+  background: #dcdcdc;
+}
+
+.conteiner {
+  margin: 100px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.conteiner div {
+  background: #838383;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  height: 200px;
+}
+
+footer {
+  font-size: small;
+  background: #7adb69;
+  height: 155px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer nav a {
+  text-decoration: none;
+  display: flex;
+  margin: 10px;
+}
+
+.coz{
+  display: flex;
+  gap: 20px;
+}
