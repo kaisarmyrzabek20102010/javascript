@@ -1,21 +1,19 @@
-let allMeals = []; // Барлық тағамдарды ғаламдық айнымалыда сақтау
+let allMeals = [];
 
-// Ас мәзіріндегі тағамдарды API немесе жергілікті JSON файлынан алу
 async function fetchMeals() {
     try {
-        const response = await fetch('meals.json'); // Файлды жүктеу
-        const data = await response.json(); // JSON-ды оқу
-        allMeals = data.meals; // Барлық тағамдарды ғаламдық массивке сақтау
-        displayMeals(allMeals); // Тағамдарды экранға шығару
+        const response = await fetch('meals.json');
+        const data = await response.json();
+        allMeals = data.meals;
+        displayMeals(allMeals); 
     } catch (error) {
         console.error("Тағамдарды алу кезінде қате орын алды:", error);
     }
 }
 
-// Тағамдарды веб-бетке шығару функциясы
 function displayMeals(meals) {
-    const container = document.getElementById('meals-container'); // Тағамдар көрсетілетін аймақ
-    container.innerHTML = ''; // Алдыңғы нәтижелерді тазалау
+    const container = document.getElementById('meals-container'); 
+    container.innerHTML = ''; 
 
     meals.forEach(meal => {
         const mealCard = `
@@ -36,21 +34,18 @@ function displayMeals(meals) {
                 </div>
             </div>
         `;
-        container.innerHTML += mealCard; // Әрбір тағамды контейнерге қосу
+        container.innerHTML += mealCard;
     });
 
-    // Егер нәтиже табылмаса, "Тағамдар табылған жоқ" деген хабарламаны көрсету
     document.getElementById('no-results').style.display = meals.length ? 'none' : 'block';
 }
 
-// Іздеу жолағына енгізілген мәтінге сәйкес тағамдарды сүзгілеу
 function filterMeals() {
-    const searchInput = document.getElementById('search').value.toLowerCase(); // Іздеу мәнін кіші әріпке айналдыру
+    const searchInput = document.getElementById('search').value.toLowerCase();
     const filteredMeals = allMeals.filter(meal => 
-        meal.strMeal.toLowerCase().includes(searchInput) // Іздеу мәтіні бар ма, жоқ па тексеру
+        meal.strMeal.toLowerCase().includes(searchInput)
     );
-    displayMeals(filteredMeals); // Сүзгіден өткен тағамдарды көрсету
+    displayMeals(filteredMeals);
 }
 
-// Бет жүктелген кезде тағамдарды алу
 fetchMeals();
