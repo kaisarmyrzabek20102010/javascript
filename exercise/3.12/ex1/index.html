@@ -1,27 +1,40 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru" class="transition-colors duration-300">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Тема</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <div class="min-h-screen flex items-center justify-center">
+      <button
+        id="themeToggle"
+        class="px-6 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition"
+      >
+        Переключить тему
+      </button>
+    </div>
+
     <script>
-      const users = [
-        { name: "alya", age: 28 },
-        { name: "asdfghj", age: 29 },
-        { name: "qwerty", age: 30.5 },
-        { name: "alzxcvbn", age: 35 },
-        { name: "denjj", age: 332432 },
-      ];
-      function hallo() {
-        return users.filter((user) => user.age >= 30);
+      const toggleBtn = document.getElementById("themeToggle");
+      const rootElement = document.documentElement;
+
+      toggleBtn.addEventListener("click", () => {
+        rootElement.classList.toggle("dark");
+
+        // optionally: save user preference
+        if (rootElement.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Load saved theme on page load
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
       }
-      function sort() {
-        return users.sort((a,b)=>a.age - b.age)
-      }
-      console.log(hallo());
-      
-      
     </script>
   </body>
 </html>

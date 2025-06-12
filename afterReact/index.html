@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Көлік Қосу</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Көлік туралы ақпарат енгізіңіз</h2>
+
+    <label>түс: <input type="text" id="colorInput" /></label><br /><br />
+    <label>Атауы: <input type="text" id="nameInput" /></label><br /><br />
+    <label>Көлемі: <input type="text" id="obiemInput" /></label><br /><br />
+    <label>Шыққан жылы: <input type="number" id="yearInput" /></label
+    ><br /><br />
+
+    <button onclick="addCar()">Қосу</button>
+
+    <h3>Көліктер тізімі:</h3>
+    <table id="carTable">
+      <thead>
+        <tr>
+          <th>Атауы</th>
+          <th>түс</th>
+          <th>Көлемі</th>
+          <th>Шыққан жылы</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      class Car {
+        constructor(color, name, obiem, year) {
+          this.color = color;
+          this.name = name;
+          this.obiem = obiem;
+          this.year = year;
+        }
+      }
+
+      function addCar() {
+        const color = document.getElementById("colorInput").value;
+        const name = document.getElementById("nameInput").value;
+        const obiem = document.getElementById("obiemInput").value;
+        const year = document.getElementById("yearInput").value;
+
+        const car = new Car(color, name, obiem, year);
+        const tableBody = document
+          .getElementById("carTable")
+          .getElementsByTagName("tbody")[0];
+
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = car.name;
+        row.appendChild(nameCell);
+
+        const colorCell = document.createElement("td");
+        colorCell.textContent = car.color;
+        row.appendChild(colorCell);
+
+        const obiemCell = document.createElement("td");
+        obiemCell.textContent = car.obiem;
+        row.appendChild(obiemCell);
+
+        const yearCell = document.createElement("td");
+        yearCell.textContent = car.year;
+        row.appendChild(yearCell);
+
+        tableBody.appendChild(row);
+
+        document.getElementById("colorInput").value = "";
+        document.getElementById("nameInput").value = "";
+        document.getElementById("obiemInput").value = "";
+        document.getElementById("yearInput").value = "";
+      }
+    </script>
+  </body>
+</html>
